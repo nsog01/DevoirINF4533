@@ -1,0 +1,8 @@
+1- Sent
+
+onclick update the contain of the main section with the list of sent messages.
+
+2- Contacts
+
+
+
