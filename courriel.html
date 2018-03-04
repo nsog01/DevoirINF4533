@@ -20,8 +20,8 @@
 	       message reçus, contacts,etc.-->
 	   <nav id="navl">
 			<ul>
-				<li><a href="#">Message reçus</a></li>
-				<li><a href="#">Messages envoyés</a></li>
+				<li onclick="chargerMessagesRecus();"><a href="#">Message reçus</a></li>
+				<li onclick="chargerMessagesEnvoyes();"><a href="#">Messages envoyés</a></li>
 				<li onclick="chargeContacts(); AfficherActionsContact();"><a href="#">Contacts</a></li>
 			</ul>
 		</nav>	
@@ -32,6 +32,9 @@
 		</div>
 		
 		<main id="center">
+			<script>
+				chargerMessagesRecus();
+			</script>
 		</main>
 	</div>
 
@@ -39,7 +42,6 @@
 		<footer id="footer"><p>Copyright 2018</p></footer>
 	</div>
 <script type="text/javascript" src="courriel.js">
-start();
 </script>
 </body>
 
