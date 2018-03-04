@@ -20,8 +20,8 @@
 	       message reçus, contacts,etc.-->
 	   <nav id="navl">
 			<ul>
-				<li onclick="chargerMessagesRecus();"><a href="#">Message reçus</a></li>
-				<li onclick="chargerMessagesEnvoyes();"><a href="#">Messages envoyés</a></li>
+				<li onclick="chargerMessagesRecus(); AfficherActionsMsg();"><a href="#">Message reçus</a></li>
+				<li onclick="chargerMessagesEnvoyes(); AfficherActionsMsg();"><a href="#">Messages envoyés</a></li>
 				<li onclick="chargeContacts(); AfficherActionsContact();"><a href="#">Contacts</a></li>
 			</ul>
 		</nav>	
@@ -33,6 +33,7 @@
 		
 		<main id="center">
 			<script>
+				AfficherActionsMsg();
 				chargerMessagesRecus();
 			</script>
 		</main>

@@ -110,4 +110,21 @@ table, td, th {
     text-align: center;
 }
 
+.menuActions{
+    text-decoration:none;
+    text-align:center;
+	font: bold 12px/18px sans-serif;
+	display: inline-block;
+	margin-left: 0px;
+	position: relative;
+	padding: 15px;
+	background: white;
+	cursor: pointer;
+	transition: all 0.2s;
+	color:black;
+	width: 10%;
+}
 
+.menuActions:hover{
+	background-color:#2E9AFE;
+}

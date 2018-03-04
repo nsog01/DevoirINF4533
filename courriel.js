@@ -126,22 +126,54 @@ function AfficherActionsContact()
 	
 	myLink = document.createElement("a");
 	myLink.setAttribute("href","#");
+	myLink.setAttribute("id","menuActions1");
+	myLink.setAttribute("class","menuActions");
+	myLink.setAttribute("onclick","ajouterContact();");
 	myText = document.createTextNode("Nouveau");
 	myLink.appendChild(myText);
 	mybody.appendChild(myLink);
 	
 	myLink = document.createElement("a");
 	myLink.setAttribute("href","#");
+	myLink.setAttribute("id","menuActions2");
+	myLink.setAttribute("class","menuActions");
 	myText = document.createTextNode("Modifier");
 	myLink.appendChild(myText);
 	mybody.appendChild(myLink);
 	
 	myLink = document.createElement("a");
 	myLink.setAttribute("href","#");
+	myLink.setAttribute("id","menuActions3");
+	myLink.setAttribute("class","menuActions");
 	myText = document.createTextNode("Supprimer");
 	myLink.appendChild(myText);
 	mybody.appendChild(myLink);
 }
+
+function AfficherActionsMsg()
+{
+	var mybody = document.getElementById("menuActions");
+	mybody.innerHTML = "";
+	
+	myLink = document.createElement("a");
+	myLink.setAttribute("href","#");
+	myLink.setAttribute("id","menuActions1");
+	myLink.setAttribute("class","menuActions");
+	myLink.setAttribute("onclick","composerMessage();");
+	
+	myText = document.createTextNode("Nouveau");
+	myLink.appendChild(myText);
+	mybody.appendChild(myLink);
+	
+	myLink = document.createElement("a");
+	myLink.setAttribute("href","#");
+	myLink.setAttribute("id","menuActions3");
+	myLink.setAttribute("class","menuActions");
+	myText = document.createTextNode("Supprimer");
+	myLink.appendChild(myText);
+	mybody.appendChild(myLink);
+}
+
 
 
 function chargerMessagesRecus() {
@@ -388,52 +420,34 @@ var mybody = document.getElementById("center");
 }
 
 
+function composerMessage()
+{
+ var mybody = document.getElementById("center");
+		mybody.innerHTML ="";
+		
+  
+  var x = '<table><tbody><tr><td>Destinataire</td><td><input type="text"></td></tr><tr><td>Objet</td><td><input type="text"></td>'+
+  '</tr><tr><td>Message</td><td><textarea style="height:200px; width:200px;"></textarea></td></tr><tr><td><input type="submit" value="Envoyer"> <input type="reset" value="Annuler">'+
+  '</td></tr></tbody></table>';
+  
+  mybody.innerHTML = x;
+  
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-function createTable() {
-  var i=0, rowEl=null,
-      tableEl = document.createElement("table");
-  // create 10 table rows, each with two cells
-  for (i=1; i <= 3; i++) {
-    rowEl = tableEl.insertRow();  // DOM method for creating table rows
-    rowEl.insertCell().textContent = "table cell "+ i +"-1" ;      
-    rowEl.insertCell().textContent = "table cell "+ i +"-2" ;
-	rowEl.insertCell().textContent = "table cell "+ i +"-3" ;
-  }
-  document.getElementById("center").appendChild(tableEl);
+function ajouterContact()
+{
+ var mybody = document.getElementById("center");
+		mybody.innerHTML ="";
+		
+  
+  var x = '<table><tbody><tr><td>Nom</td><td><input type="text"></td></tr><tr><td>Prenom</td><td><input type="text"></td>'+
+  '</tr><tr><td>Numero</td><td><input type="tel"></td></tr><tr><td>Email</td><td><input type="email"></td></tr>'+
+'<tr><td><input type="submit" value="Envoyer"> <input type="reset" value="Annuler">'+
+  '</td></tr></tbody></table>';
+  
+  mybody.innerHTML = x;
+  
 }
 
 
@@ -441,42 +455,23 @@ function createTable() {
 
 
 
-function afficherContacts(idTable) {
-    var x = document.createElement("TABLE");
-    x.setAttribute("id",idTable);
-    x.setAttribute("style", "width:100%");
-    document.getElementById(idTable).appendChild(x);
-    
-}
 
-function ajouterLigne(f,idTable){
-	var l =  document.createElement("tr");
-	var m;
-	var n;
-	  
-	for(int i; i < f.length; i++)
-	{ 
-	   m =  document.createElement("th");
-	   n = document.createTextNode(f[i]);
-	   m.appendChild(n);
-	  document.getElementById(idTable).appendChild(l);
-	}
-}
-    
 
-    
-    
-    
-    
-    
-  /*  
-    var y = document.createElement("TR");
-    y.setAttribute("id", "myTr");
-    document.getElementById("myTable").appendChild(y);
 
-    var z = document.createElement("TD");
-    var t = document.createTextNode("Alino");
-    z.appendChild(t);
-    document.getElementById("myTr").appendChild(z);
-}
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
